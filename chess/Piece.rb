@@ -1,8 +1,16 @@
 
 class Piece 
 
-    def initialize
-        @output = "x"
+    def initialize(color, board, pos)
+       @color = color
+       @board = board
+       @pos = pos
     end
+
+    def to_s 
+        
+    end
+
+
 
 end

@@ -20,9 +20,11 @@ class Board
     end
 
     def move_piece(start_pos, end_pos)
-        piece = start_pos
+        piece = self[start_pos]
         raise "null_piece" if self[start_pos] == nil
-        raise "piece there" unless self[end_pos] != nil 
+        raise "piece there" unless self[end_pos] == nil 
+        self[end_pos] = piece
+        self[start_pos] = nil
     end
 
     def valid_pos?(pos)
