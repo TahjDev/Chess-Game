@@ -4,8 +4,8 @@ class Board
 
     def initialize
         @grid = Array.new(8) {Array.new(8)}
-        @grid = @grid.map_with_index do |row, i|
-            row.map { |ele| ele = i.between(2, 6) ? nil : Piece.new }
+        @grid = @grid.map.with_index do |row, i|
+            row.map { |ele| ele = i.between?(2, 5) ? nil : Piece.new }
         end
     end
 
