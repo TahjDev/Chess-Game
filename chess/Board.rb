@@ -4,7 +4,9 @@ class Board
 
     def initialize
         @grid = Array.new(8) {Array.new(8)}
-        
+        @grid = @grid.map_with_index do |row, i|
+            row.map { |ele| ele = i.between(2, 6) ? nil : Piece.new }
+        end
     end
 
     def [](pos)
@@ -19,7 +21,8 @@ class Board
 
     def move_piece(start_pos, end_pos)
         piece = start_pos
-        
+        raise "null_piece" if self[start_pos] == nil
+        raise "piece there" unless self[end_pos] != nil 
     end
 
     def valid_pos?(pos)
