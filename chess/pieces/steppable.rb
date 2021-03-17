@@ -6,4 +6,8 @@ module Steppable
         end
         moves
     end
+
+    def move_diffs
+        raise NotImplementedError
+    end
 end
