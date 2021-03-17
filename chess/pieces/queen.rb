@@ -5,7 +5,7 @@ class Queen
 
     include Slideable
     def move_dirs
-        HORIZONTAL_DIRS + DIAGONAL_DIRS
+        horizontal_dirs + diagonal_dirs
     end 
 
 end
