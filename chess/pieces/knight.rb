@@ -1,16 +1,16 @@
 
-require_relative 'piece'
-require_relative 'stepable'
+require_relative '../Piece'
+require_relative 'steppable'
 
 class Knight < Piece
-    include Stepable
+    include Steppable
     def symbol
         '♞'.colorize(color)
     end
 
     protected
 
-    def move_diffs(start_pos)
+    def move_diffs
       @move_diffs = [
         [-2, -1],
         [-2,  1],

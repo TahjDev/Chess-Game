@@ -11,9 +11,12 @@ class Piece
     end
 
     def to_s 
-        color.to_s
+        self.symbol
     end
 
+    # def valid_moves
+    #     .moves
+    # end
 
 
 end

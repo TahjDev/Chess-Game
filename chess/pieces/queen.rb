@@ -1,7 +1,7 @@
 require_relative "../Piece.rb"
 require_relative "slideable"
 
-class Queen
+class Queen < Piece
 
     include Slideable
     def symbol
@@ -9,7 +9,7 @@ class Queen
     end
 
     def move_dirs
-        horizontal_dirs + diagonal_dirs
+        HORIZONTAL_DIRS + DIAGONAL_DIRS
     end 
 
 end
