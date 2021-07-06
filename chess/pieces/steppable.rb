@@ -17,3 +17,10 @@ module Steppable
         raise NotImplementedError
     end
 end
+
+
+def(arg1, arg2, arg3)
+    puts arg1
+    puts arg2
+    puts arg3
+end
